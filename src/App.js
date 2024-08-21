@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Note from './Components/Note';
 import AsyncStorage from '@react-native-community/async-storage'; // Import the deprecated AsyncStorage
 import './App.css';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
   const [notes, setNotes] = useState([]);
 
@@ -49,6 +49,7 @@ function App() {
   }
 
   return (
+    
     <div className="App">
       <Header />
       <Area onAdd={addNote} />
