@@ -49,11 +49,12 @@ function App() {
   }
 
   return (
-    
+    <Router basename="/NoteApp">
     <div className="App">
+
       <Header />
       <Area onAdd={addNote} />
-      <div className="notes-container">
+      <div className="notes-container" style={{marginBottom:10,}}>
         {notes.map((noteItem, index) => (
           <Note
             key={index}
@@ -66,6 +67,7 @@ function App() {
       </div>
       <Footer />
     </div>
+  </Router>
   );
 }
 
